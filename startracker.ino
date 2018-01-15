@@ -32,7 +32,7 @@ void loop()
   {
     timestamp=millis();
     if (timestamp>=4294966796) timestamp-=4294966796;
-    PORTD = paso[i/32];
+    PORTD = paso[i>>5];
     i += 32;
   }  
 } 
