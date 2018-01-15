@@ -31,7 +31,7 @@ void loop()
   PORTD = paso[i/32];
   i += 32;
      
-  if (millis()-timestamp>=1000) // un paso por segundo
+  if (millis()-timestamp>=1000) // medio paso por segundo
   {
     timestamp=millis();
     if (timestamp>=4294966796) timestamp-=4294966796;  
