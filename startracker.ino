@@ -19,6 +19,7 @@
 
 byte paso[8] = {B00100000, B00110000, B00010000, B00011000, B00001000, B00001100, B00000100, B00100100};
 byte i = 0;
+unsigned long timestamp=millis()
 
 void setup()
 {
@@ -29,8 +30,11 @@ void loop()
 {
   PORTD = paso[i/32];
   i += 32;
-  delay(100);
-}
-  
-  
+     
+  if (millis()-timestamp>=1000) // un paso por segundo
+  {
+    timestamp=millis();
+    if (timestamp>=4294966796) timestamp-=4294966796;  
+  }
+} 
   
