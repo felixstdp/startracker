@@ -19,7 +19,7 @@
 
 byte paso[8] = {B00100000, B00110000, B00010000, B00011000, B00001000, B00001100, B00000100, B00100100};
 byte i = 0;
-unsigned long timestamp=millis()
+unsigned long timestamp=millis();
 
 void setup()
 {
