@@ -32,9 +32,9 @@ void setup()
 
 void loop()
 {
-  if (micros()-now>=gap) // un paso por segundo
+  if (micros()-now >= gap) // un paso por segundo
   {
-    now=micros();
+    now = micros();
     PORTF = paso[i>>6];
     i += 64;
   }  
