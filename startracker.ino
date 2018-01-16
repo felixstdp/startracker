@@ -35,7 +35,6 @@ void loop()
   if (micros()-now>=gap) // un paso por segundo
   {
     now=micros();
-    if (now>=4294966796) now-=4294966796;
     PORTF = paso[i>>6];
     i += 64;
   }  
