@@ -20,7 +20,7 @@
 // una rotación = 86163581 milisegundos
 
 const int dientes = 60;
-const int gap = 86163581000 / 64 / 8 / dientes;
+const int gap = 86163581000 / 64 / 4 / dientes;
 byte paso[4] = {B1100, B0110, B0011, B1001};
 byte i = 0;
 unsigned long now=micros();
