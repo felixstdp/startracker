@@ -21,7 +21,7 @@
 
 const int dientes = 60;
 const int gap = 86163581000 / 64 / 8 / dientes;
-byte paso[8] = {B1000, B1100, B0100, B0110, B0010, B0011, B0001, B1001};
+byte paso[4] = {B1100, B0110, B0011, B1001};
 byte i = 0;
 unsigned long now=micros();
 
@@ -36,8 +36,8 @@ void loop()
   {
     timestamp=micros();
     if (now>=4294966796) now-=4294966796;
-    PORTF = paso[i>>5];
-    i += 32;
+    PORTF = paso[i>>6];
+    i += 64;
   }  
 } 
   
